@@ -217,18 +217,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Draw Multiplier Text attached to plane
         if (text) {
-            // Text settings
+            // Reset rotation/scale for text so it's readable? 
+            // Or keep it attached? Attached is better for "fly with plane".
+            // But we don't want it rotated if the plane rotates (plane currently doesn't rotate much).
+            // Let's draw it offset to the right.
             ctx.fillStyle = '#ffffff';
             ctx.font = '900 60px "Courier New", monospace';
-            ctx.textAlign = 'right'; // Changed to right alignment
+            ctx.textAlign = 'left';
             ctx.textBaseline = 'middle';
             ctx.shadowColor = 'rgba(0,0,0,0.8)';
             ctx.shadowBlur = 10;
             ctx.shadowOffsetX = 4;
             ctx.shadowOffsetY = 4;
-            // Draw text at negative offset (behind the plane)
-            // Plane half-width is approx 88 (176/2). -110 gives some padding.
-            ctx.fillText(text, -110, 0);
+            // Draw text at offset
+            ctx.fillText(text, 100, 0);
         }
         
         ctx.restore();
@@ -360,7 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameButton.textContent = `CASH OUT $${currentWin.toFixed(2)}`;
         
         // Reset color to white/default since volatility is gone
-        if (liveMultiplier) liveMultiplier.classList.remove('text-red-500', 'text-green-500');
+        if (liveMultiplier) liveMultiplier.classList.remove('text-red-500', 'text-yellow-500');
         
         drawChart();
 
