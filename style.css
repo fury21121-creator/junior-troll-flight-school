@@ -70,6 +70,10 @@ h2.text-jeet-green {
 }
 
 /* Floating Animation */
+#game-canvas-container {
+    height: 600px !important;
+}
+
 @keyframes floatUp {
     0% {
         transform: translateY(110vh) rotate(0deg);
