@@ -62,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('resize', resizeCanvas);
     
+    // Initial resize
+    resizeCanvas();
+    
     // Event Listeners
     if (gameButton) {
         gameButton.addEventListener('click', () => {

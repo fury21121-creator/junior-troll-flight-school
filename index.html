@@ -287,7 +287,7 @@
                       </p>
                     </div>
                     <div id="game-display" class="hidden text-6xl font-black text-yellow-500 font-mono">1.00x</div>
-                    <div id="game-canvas-container" class="relative w-full h-80 bg-jeet-darker/50 rounded-lg overflow-hidden border border-yellow-500/20 mb-6 hidden">
+                    <div id="game-canvas-container" class="relative w-full h-[500px] md:h-[600px] bg-jeet-darker/50 rounded-lg overflow-hidden border border-yellow-500/20 mb-6 hidden">
                         <canvas id="game-canvas" class="w-full h-full"></canvas>
                         
                         <!-- Game Overlay UI -->
@@ -311,7 +311,7 @@
 
                         <!-- Result Modal -->
                         <div id="result-modal" class="absolute inset-0 bg-black/80 backdrop-blur-md z-[100] hidden items-center justify-center opacity-0 transition-opacity duration-300">
-                            <div class="text-center space-y-4 p-6 max-w-sm w-full animate-scale-in-bounce">
+                            <div class="text-center space-y-4 p-4 md:p-6 max-w-[90%] md:max-w-sm w-full animate-scale-in-bounce">
                                 <div id="modal-icon" class="text-6xl mb-2">🚀</div>
                                 <h3 id="modal-title" class="text-3xl font-black text-white uppercase tracking-tight">TITLE</h3>
                                 <p id="modal-message" class="text-jeet-gray text-lg font-medium leading-tight">Message goes here</p>
